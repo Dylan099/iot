@@ -1,0 +1,122 @@
+{
+  "project_info": {
+    "project_number": "785927364713",
+    "firebase_url": "https://pastillerointeligente-58f88.firebaseio.com",
+    "project_id": "pastillerointeligente-58f88",
+    "storage_bucket": "pastillerointeligente-58f88.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:785927364713:android:41aed10c23c6ece72482f8",
+        "android_client_info": {
+          "package_name": "com.example.elpastillerointeligente"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "785927364713-hm6uin9tip28571pc6adaf44de4b0er8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.elpastillerointeligente",
+            "certificate_hash": "347ee8f73a361fb3d08cf72d19a5fea9e302b380"
+          }
+        },
+        {
+          "client_id": "785927364713-rst17i6c2c7986i8g315t920ktfm4a95.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPZi4VvjL-KeBb-dhGqD3jEx65cpVDgAk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "785927364713-rst17i6c2c7986i8g315t920ktfm4a95.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:785927364713:android:fe9680be1fb7497d2482f8",
+        "android_client_info": {
+          "package_name": "com.example.mirke.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "785927364713-pt2l77dhuobn786172ijmjcj9d0ic7e2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mirke.myapplication",
+            "certificate_hash": "ef1485bee2b8d63784588de19b3e708a220de23f"
+          }
+        },
+        {
+          "client_id": "785927364713-rst17i6c2c7986i8g315t920ktfm4a95.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPZi4VvjL-KeBb-dhGqD3jEx65cpVDgAk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "785927364713-rst17i6c2c7986i8g315t920ktfm4a95.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:785927364713:android:3736be8a5834595a2482f8",
+        "android_client_info": {
+          "package_name": "com.example.mirke.pastillerointeligente"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "785927364713-bc83j3q574eqn1b36ao5nj721gbtp1de.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mirke.pastillerointeligente",
+            "certificate_hash": "ef1485bee2b8d63784588de19b3e708a220de23f"
+          }
+        },
+        {
+          "client_id": "785927364713-rst17i6c2c7986i8g315t920ktfm4a95.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPZi4VvjL-KeBb-dhGqD3jEx65cpVDgAk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "785927364713-rst17i6c2c7986i8g315t920ktfm4a95.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
