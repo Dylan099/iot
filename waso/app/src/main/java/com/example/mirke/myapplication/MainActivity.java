@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -20,41 +21,52 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
-    Button button;
-    ListView lista;
-    ArrayAdapter<String> adaptador;
-    TextView tv;
+    Switch lunes;
+    Switch martes;
+    Switch miercoles;
+    Switch jueves;
+    Switch domingo;
     private DatabaseReference dref;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         dref = FirebaseDatabase.getInstance().getReference();
-        button = (Button) findViewById(R.id.boton);
-        lista = (ListView)findViewById(R.id.idLV);
-        tv = (TextView) findViewById(R.id.tv);
-        adaptador = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1);
-        lista.setAdapter(adaptador);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dref.child("pastillero").addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        adaptador.clear();
-                        for(DataSnapshot ds: dataSnapshot.getChildren()){
-                            String mode = ds.getValue(String.class);
-                            Log.i("data","value = "+mode);
-                            //adaptador.add("Mensaje = "+mode);
-                            tv.setText("Mensaje = "+mode);
-                        }
-                    }
+        lunes = (Switch) findViewById(R.id.lunes);
+        martes = (Switch) findViewById(R.id.martes);
+        miercoles = (Switch) findViewById(R.id.miercoles);
+        jueves = (Switch) findViewById(R.id.jueves);
+        domingo = (Switch) findViewById(R.id.viernes);
+        lunes.setChecked(false);
+        martes.setChecked(false);
+        miercoles.setChecked(false);
+        jueves.setChecked(false);
+        domingo.setChecked(false);
 
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-                        Log.i("data","Error en la base de datos.......");
+        dref.child("pastillero").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for(DataSnapshot ds: dataSnapshot.getChildren()){
+                    String mode = ds.getValue(String.class);
+                    Log.i("data","value = "+mode);
+                    String []code=mode.split(";");
+                    if (code[0].equals("LunN")){
+                        lunes.setChecked(true);
+                    }else if(code[0].equals("MarN")){
+                        martes.setChecked(true);
+                    }else if(code[0].equals("MieN")){
+                        miercoles.setChecked(true);
+                    }else if(code[0].equals("JueN")){
+                        jueves.setChecked(true);
+                    }else if(code[0].equals("DomN")){
+                        domingo.setChecked(true);
                     }
-                });
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Log.i("data","Error en la base de datos.......");
             }
         });
 
